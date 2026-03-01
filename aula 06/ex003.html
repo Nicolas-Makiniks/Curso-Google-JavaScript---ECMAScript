@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 3</title>
+    <link rel="stylesheet" href="../CSS/firstStyle.css" />
+  </head>
+  <body>
+    <script>
+      // Formatação de textos
+      var userName = window.prompt("Qual é seu nome?");
+      document.write(`<p>Seu nome tem ${userName.length} caracteres.</p><br>`);
+      document.write(
+        `<p>Seu nome em maiúsculas é: ${userName.toUpperCase()}.</p><br>`,
+      );
+      document.write(
+        `<p>Seu nome em minúsculas é: ${userName.toLowerCase()}.</p><br>`,
+      );
+
+      // Formatação de números
+      var userNumber = Number(window.prompt("Digite um salário:"));
+      document.write(
+        `<p>O número digitado foi: ${userNumber.toFixed(2).replace(".", ",")}.</p><br>`,
+      );
+      document.write(
+        `<p>O salário convertido para reais: ${userNumber.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}</p><br>`,
+      );
+      document.write(
+        `<p>O salário convertido para reais: ${userNumber.toLocaleString("pt-BR", { style: "currency", currency: "USD" })}</p><br>`,
+      );
+      document.write(
+        `<p>O salário convertido para reais: ${userNumber.toLocaleString("pt-BR", { style: "currency", currency: "EUR" })}</p><br>`,
+      );
+    </script>
+  </body>
+</html>
